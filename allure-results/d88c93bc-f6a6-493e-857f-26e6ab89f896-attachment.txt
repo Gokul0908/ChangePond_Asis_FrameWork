@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//select[@ng-model='pageSize']/option[.='20']"
+}

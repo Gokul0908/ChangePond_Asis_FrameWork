@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "Unable to locate element: //select[@name='Hospital']",
+  "stacktrace": "WebDriverError@chrome://marionette/content/error.js:175:5\nNoSuchElementError@chrome://marionette/content/error.js:387:5\nelement.find/</<@chrome://marionette/content/element.js:330:16\n"
+}

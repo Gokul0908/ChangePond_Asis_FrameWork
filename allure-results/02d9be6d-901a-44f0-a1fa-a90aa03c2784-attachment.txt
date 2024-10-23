@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//ul[@id='UlFetchHospital']/li/div/a[.= Hospital Director - Hospital Director]"
+}

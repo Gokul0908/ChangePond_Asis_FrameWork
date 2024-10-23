@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//p[.='FMS']/../a/div[@class='icon']"
+}

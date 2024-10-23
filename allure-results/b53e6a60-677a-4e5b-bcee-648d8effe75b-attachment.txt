@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//select[@id='Company']/option[.='Radicare']\"}\n  (Session info: chrome=129.0.6668.101)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF6984CB0D5+29557]\n\t(No symbol) [0x00007FF69843FA90]\n\t(No symbol) [0x00007FF6982FB56A]\n\t(No symbol) [0x00007FF69834F695]\n\t(No symbol) [0x00007FF69834F8EC]\n\t(No symbol) [0x00007FF69839B777]\n\t(No symbol) [0x00007FF6983771CF]\n\t(No symbol) [0x00007FF69839851C]\n\t(No symbol) [0x00007FF698376F33]\n\t(No symbol) [0x00007FF69834116F]\n\t(No symbol) [0x00007FF6983422D1]\n\tGetHandleVerifier [0x00007FF6987FC9AD+3378253]\n\tGetHandleVerifier [0x00007FF6988484D7+3688311]\n\tGetHandleVerifier [0x00007FF69883D20B+3642539]\n\tGetHandleVerifier [0x00007FF69858A6F6+813462]\n\t(No symbol) [0x00007FF69844AB9F]\n\t(No symbol) [0x00007FF698446BB4]\n\t(No symbol) [0x00007FF698446D50]\n\t(No symbol) [0x00007FF698435C5F]\n\tBaseThreadInitThunk [0x00007FF972A47374+20]\n\tRtlUserThreadStart [0x00007FF9743BCC91+33]\n"
+}

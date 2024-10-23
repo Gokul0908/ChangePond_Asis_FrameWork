@@ -1,0 +1,3 @@
+{
+  "text": "C:\\Users\\GOKUL~1.SEL\\AppData\\Local\\Temp\\scoped_dir23228_558752644\\upload23228_680857522\\samplefile.pdf"
+}
