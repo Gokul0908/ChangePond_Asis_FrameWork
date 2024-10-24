@@ -82,24 +82,24 @@ export const lIDSuccessMessage = "Data saved successfully"
 export const llsServiceIcon = "LLS"
 export const masterDropDownLinenDetails = "Linen Details"
 export const subModuleLinenItemDetails = "Linen Item Details"
-export const submoduleLinenUnitPrice="Linen Unit Price"
+export const submoduleLinenUnitPrice = "Linen Unit Price"
 export const concatLinenCode = linenCode + ' ' + '-' + ' ' + linenDescription + ' '
-export const fileType="Manual"
-export const fileName="MyFiles"+ utils.getRandomNumbers(3)
-export const filepath="./Upload_Files/samplefile.pdf"
-export const linenUnitPrice= utils.getRandomNumbers(3)
-export const emptyLinenCode=" "
-export const submoduleLinenParRequire="Linen PAR Requirements"
-export const pagesize="20"
-export const parvalue= utils.getRandomNumbers(3)
+export const fileType = "Manual"
+export const fileName = "MyFiles" + utils.getRandomNumbers(3)
+export const filepath = "./Upload_Files/samplefile.pdf"
+export const linenUnitPrice = utils.getRandomNumbers(3)
+export const emptyLinenCode = " "
+export const submoduleLinenParRequire = "Linen PAR Requirements"
+export const pagesize = "20"
+export const parvalue = utils.getRandomNumbers(3)
 
 // LLS User Department and Area
-export const submoduleUserDepartmentArea="User Department/Area Details"
-export const operatingDays="7 days per week"
-export const effectiveDate= getTodayDate()
-export const bagpieces= utils.getRandomNumbers(2)
+export const submoduleUserDepartmentArea = "User Department/Area Details"
+export const operatingDays = "7 days per week"
+export const effectiveDate = getTodayDate()
+export const bagpieces = utils.getRandomNumbers(2)
 export const hospitalname = "hospital"
-export const hospitalRepresentative="Hospital Director - Hospital Director"
+export const hospitalRepresentative = "Hospital Director - Hospital Director"
 export const deliveryTime = getRandomTime()
 export const collectionTime = getRandomTime()
 export const linenTime = getRandomTime()
@@ -111,3 +111,11 @@ export const concatLinenCode1 = linenCode + '-' + ' ' + linenDescription
 export const par1Require = utils.getRandomNumbers(3)
 export const par2Require = utils.getRandomNumbers(3)
 export const defaultIssue = "Yes"
+
+
+//Transaction Module in LLS
+export const transactionSubModule = "Linen Shipment"
+export const linenShipmentSubModule = "Clean Linen Order"
+export const priority = "Emergency"
+export const requestedQuantity = utils.getRandomNumbers(2)
+export const concatLinenCode2 = linenCode + ' ' + '-' + ' ' + linenDescription

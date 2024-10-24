@@ -8,6 +8,7 @@ import gmLinenGroup from "../pageobjects/gmLinenGroup"
 import linenItemDetails from "../pageobjects/linenItemDetails"
 import lls from "../pageobjects/lls"
 import linenParRequirement from "../pageobjects/linenParRequirement"
+import cleanLinenOrderLLS from "../pageobjects/cleanLinenOrderLLS"
 
 
 describe("Creating a full flow for Linen and Laundry Services", async () => {
@@ -39,8 +40,10 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
             await GeneralMaster.clickasisHeartIcon()
         })
 
+
         it("Creating user Area Master in FMS", async () => {
 
+            await asisHomePage.hoverOnServiceIcon(constant.fmsServices)
             await asisHomePage.selectServicesIcon(constant.fmsServices)
             await fMSModule.clickMasterDropDown(constant.masterLocationSubModule)
             await fMSModule.clickSubModulesDropDown(constant.locationSubModule1)
@@ -78,6 +81,8 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
             await browser.pause(2000)
 
         })
+
+
         it("Creating user Location Master in FMS", async () => {
 
             await fMSModule.clickSubModulesDropDown(constant.locationSubModule2)
@@ -102,8 +107,11 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
             await fmsUserLocationMaster.clickSaveButton()
             await fmsUserLocationMaster.checkSuccessNotification(constant.ULMSuccessMessage)
         });
+    })
 
-        it("Creating Linen Group Code and Creating linen Item Details in GM ", async () => {
+    describe("Creating Linen Group Code and Creating linen Item Details in GM ", async () => {
+
+        it("Linen Group Code nd linen Item Details", async () => {
 
             await GeneralMaster.clickasisHeartIcon()
             await asisHomePage.selectServicesIcon(constant.gmServices)
@@ -140,8 +148,11 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
             await browser.pause(2000)
 
         })
+    })
 
-        it("Adding Linen Item Details in LLS", async () => {
+    describe("Adding Linen Item Details , Linen Unit Price, User Department and Area Details in LLS", async () => {
+
+        it("Linen Item Details in LLS", async () => {
             await asisHomePage.clickasisHeartIcon()
             await asisHomePage.selectServicesIcon(constant.llsServiceIcon)
             await lls.clickMasterDropDown(constant.masterDropDownLinenDetails)
@@ -180,20 +191,20 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
         it("Create UserDepartment and Area Details in lls", async () => {
             await lls.clickSubModulesDropDown(constant.submoduleUserDepartmentArea)
             await lls.clickaddButton()
-            await browser.pause(2000)            
+            await browser.pause(2000)
             await lls.selectUserDepartmentArea(constant.fmsUserAreaCode, constant.concatfmsUserAreaCode)
             await browser.pause(2000)
             await lls.clickLabelRemarks()
             await lls.selecthospital(constant.hospitalname, constant.hospitalRepresentative)
             await browser.pause(3000)
             await lls.selectOperatingDays(constant.operatingDays)
-            await browser.pause(3000)         
-            await lls.enterEffectiveDate(constant.effectiveDate)            
-            await lls.enterBagpieces(constant.bagpieces)            
+            await browser.pause(3000)
+            await lls.enterEffectiveDate(constant.effectiveDate)
+            await lls.enterBagpieces(constant.bagpieces)
             await lls.enterDeliveryTime(constant.deliveryTime)
             await browser.pause(3000)
             await lls.clickLabelRemarks()
-            await lls.enterCollectionTime(constant.collectionTime)            
+            await lls.enterCollectionTime(constant.collectionTime)
             await lls.enterLinenArrangementTime(constant.linenTime)
             await lls.selectCleansingAndSantizingDay(constant.SantizingDay)
             await lls.selectFurnishingItem(constant.furnishingItem)
@@ -204,12 +215,29 @@ describe("Creating a full flow for Linen and Laundry Services", async () => {
             await lls.enterPar1Require(constant.par1Require)
             await lls.enterPar2Require(constant.par2Require)
             await browser.pause(3000)
-            await lls.selectDefaultIssue(constant.defaultIssue)            
+            await lls.selectDefaultIssue(constant.defaultIssue)
             await lls.clickUserDepartSaveButton()
             await browser.pause(3000)
             await lls.checkSuccessNotification(constant.lIDSuccessMessage)
-            await lls.clickSubModulesDropDown(constant.submoduleUserDepartmentArea)            
+            await lls.clickSubModulesDropDown(constant.submoduleUserDepartmentArea)
             await browser.pause(10000)
+        })
+
+    })
+
+    describe("Creating Linen Order and Despatching in LLS", async () => {
+
+        it("Linen Order and Despatching", async () => {
+            await cleanLinenOrderLLS.clickTransactionDropDown(constant.transactionSubModule)
+            await cleanLinenOrderLLS.clickSubModulesDropDown(constant.linenShipmentSubModule)
+            await browser.pause(2000)
+            await cleanLinenOrderLLS.clickaddButton()
+            await cleanLinenOrderLLS.selectPriority(constant.priority)
+            await cleanLinenOrderLLS.selectLinenCode(constant.concatLinenCode2, constant.linenCode)
+            await browser.pause(2000)
+            await cleanLinenOrderLLS.enterRequestedQuantity()
+            await cleanLinenOrderLLS.clickSaveButton()
+            await browser.pause(2000)
         })
     })
 })
