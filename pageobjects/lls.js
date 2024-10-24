@@ -4,7 +4,7 @@ class lls {
 
     get masterDropDown() { return $("//a[.='Master']") }
     getMasterSubModules(MasterSubModules) { return $(`//span[.='${MasterSubModules}']`) }
-    getSubModuleDropDown(subModuleValues) { return $(`//ul[@class='show']/li/a[.='${subModuleValues}']`) }
+    getSubModuleDropDown(subModuleValues) { return $(`//ul[@class='show']/li/a[.='${subModuleValues}']`) }    
     get addButton() { return $("//td[@id='Add']") }
     get linenGrpCode() { return $("//input[@id='GmLinenCode']") }
     getLinenCodeDropDown(concatLinenCode) { return $(`//ul[@id='UlFetchGmLinenCode']/li/div/a[.='${concatLinenCode}']`) }
@@ -53,6 +53,8 @@ class lls {
         await ReusablesComponents.waitAndClick(this.masterDropDown)
         await ReusablesComponents.waitAndClick(this.getMasterSubModules(MasterSubModules))
     }
+    
+
     async clickLinenUnitPriceSaveButton() {
         await ReusablesComponents.waitAndClick(this.linenUnitPriceSaveBtn)
     }
